@@ -1,10 +1,40 @@
+.post-li {
+    border-bottom: thin dashed #909090;
+}
+.sidebar {
+    width: 25%;
+    float: left;
+    text-align: center;
+    position: relative;
+    padding-left: 60px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    opacity: 0.3;
+    transition-duration: 1s;
+    .img-circle{
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+.panel {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-color: #dddddd;
+    padding: 15px 15px 15px 15px;
+}
 /**
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    background-color: #222222;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding-left: 60px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -16,15 +46,17 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
+    margin-right:15px;
+    margin-left: 15px;
+    color: #ccc;
+    &:hover {
+        color: #fff;
+        text-decoration: none;
     }
 }
 
 .site-nav {
-    float: right;
+    float: left;
     line-height: 56px;
 
     .menu-icon {
@@ -32,13 +64,18 @@
     }
 
     .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
+        font-size: 26px;
+        line-height: 56px;
+     etter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+    margin-right:15px;
+    margin-left: 15px;
+    color: #ccc;
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
     }
 
     @include media-query($on-palm) {
@@ -93,7 +130,9 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    position:absolute;
+    bottom:5%;
+    width:100%;
 }
 
 .footer-heading {
@@ -162,7 +201,10 @@
  * Page content
  */
 .page-content {
+    float:left;
     padding: $spacing-unit 0;
+    left: 25%;
+    width:75%;
 }
 
 .page-heading {
@@ -187,7 +229,6 @@
     display: block;
     font-size: 24px;
 }
-
 
 
 /**
